@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <div class="game-container">
+      <div class="image-box">
+        <h1>Good Luck</h1>
+        <p>if you lose, Mario gets the noose!</p>
+        <p>why would you want hurt sweet, sweet Mario?</p>
+        <img
+          src="https://i.ytimg.com/vi/LbDIfOSay-c/maxresdefault.jpg"
+          alt=""
+        />
+      </div>
+      <div class="display-items">
+        <div class="word-display">
+          <p class="word" id="word">Placeholder</p>
+        </div>
+        <div class="used-letters">
+          <p class="letters">A B C</p>
+        </div>
+        <div class="lives-display">
+          <p>9 <span>lives remaining</span></p>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/javascript/game.js"></script>
   </body>
 </html>
