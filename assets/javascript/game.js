@@ -1,5 +1,5 @@
-const wordChoices = ["mario", "luigi", "toad", "yoshi"];
-const randomIndex = Math.ceil(Math.random() * wordChoices.length - 1);
+const wordChoices = ["mario", "luigi", "toad", "yoshi", "koopa"];
+const randomIndex = Math.floor(Math.random() * wordChoices.length);
 
 let randomWord = document.getElementById("word");
 
