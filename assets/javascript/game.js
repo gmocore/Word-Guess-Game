@@ -3,13 +3,15 @@
 const wordChoices = ["mario", "luigi", "toad", "yoshi", "koopa"];
 const randomIndex = Math.floor(Math.random() * wordChoices.length);
 const randomWord = document.getElementById("word");
+const usedLetters = document.getElementById("letters");
 const currentWord = (randomWord.innerHTML = wordChoices[randomIndex]);
 const lifeCount = document.getElementById("life-count");
+let incorrectGuesses = [];
 let livesRemaining = 9;
 let guessResult;
 let gameover = false;
 
-//FUNCTIONS
+// FUNCTIONS
 
 function keyCheck() {
   document.addEventListener("keypress", function(event) {
@@ -18,8 +20,10 @@ function keyCheck() {
       if (currentWord.includes(keyPressed)) {
         guessResult = "correct";
       } else {
-        guessResult = "incorrect";
         guessCheck();
+        guessResult = "incorrect";
+        incorrectGuesses.push(keyPressed);
+        usedLetters.innerText = incorrectGuesses.join("").toUpperCase();
       }
     }
   });
