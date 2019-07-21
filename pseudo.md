@@ -6,7 +6,7 @@
 - Create array with word choices
 
   - Create function to generate random selection from array
-  - Use math object \* array.length to create random index
+  - Use math object * array.length to create random index
     - Access random index number from created index number of word choice array
 
 - Add event listener for each key press event
